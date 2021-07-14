@@ -20,7 +20,7 @@ df_list = pd.read_html(page_source)
 standings = [df_list[1], df_list[2]]
 result = pd.concat(standings, axis=1)
 result = result.set_axis(['rank', 'team', 'runs', 'tb', 'rbi', 'bb_hit', 'k_hit', 'sac', 'sb', 'ip', 'h', 'er', 'bb_pitch', 'k_pitch', 'nh', 'pg', 'w', 'l', 'sv', 'bs', 'hd'], axis=1)
-result.to_csv("/Users/jameshollister/Documents/Python/FantasyResults.csv", index = False)
+result.to_csv("FantasyResults.csv", index = False)
 browser.close()
 
 
