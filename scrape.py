@@ -26,7 +26,6 @@ result.to_csv("FantasyResults.csv", index = False)
 #Now, get all of the team rosters, and create seperate .csv files.
 
 for i in range(len(result['team'])):
-    print(i)
     url = "https://fantasy.espn.com/baseball/team?leagueId=132005&teamId=" + str(i+1)
     browser.get(url)
     time.sleep(7)
@@ -57,17 +56,3 @@ for i in range(len(result['team'])):
 
 
 browser.close()
-
-#Team URLs: Looks like I don't need to log back in when getting to these websites?
-#https://fantasy.espn.com/baseball/team?leagueId=132005&teamId=12
-
-#And the team name:
-#elements = soup.find("span", class_="teamName truncate")
-#print(elements.text.strip())
-
-#frms = browser.find_elements_by_xpath('(//iframe)')
-##browser.switch_to_frame(frms[2])
-#browser.switch_to.frame(frms[2])
-#browser.find_element_by_xpath("(//input)[1]").send_keys("jhollister@outlook.com")
-#browser.find_element_by_xpath("(//input)[2]").send_keys("Osubbfan21!")
-#browser.find_element_by_xpath("(//button").click()
